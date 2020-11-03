@@ -1,0 +1,23 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-mqtt
+  labels:
+    app: nodered
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodered
+  template:
+    metadata:
+      labels:
+        app: nodered
+    spec:
+      containers:
+      - name: mqtt-mosquito
+        image: eclipse-mosquitto 
+        ports:
+        - containerPort: 9001
+        - containerPort: 8883

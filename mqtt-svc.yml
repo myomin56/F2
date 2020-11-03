@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: cpo56-mqtt-service 
+  name: cpo134-mqtt-service 
   labels:
     app: nodered
 spec:

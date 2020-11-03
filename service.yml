@@ -23,14 +23,14 @@ spec: #specifications for our object
 apiVersion: v1 #version of the API to use
 kind: Service #What kind of object we're deploying
 metadata: #information about our object we're deploying
-  name: cpo-service #Name of the service
+  name: cpo56-service #Name of the service
 spec: #specifications for our object
   type: NodePort #Ignore for now discussed in a future post
   ports: #Ignore for now discussed in a future post
   - name: http
     port: 1880
     targetPort: 1880
-    nodePort: 30001
+    nodePort: 30003
     protocol: TCP
   selector: #Label selector used to identify pods 
     app: nodered
